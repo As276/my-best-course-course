@@ -1,0 +1,16 @@
+title: My best course
+description: I am writing a big course
+template:
+  repo: my-best-course-template
+  name: my-best-course
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
